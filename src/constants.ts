@@ -45,9 +45,9 @@ export namespace DotnetConstants {
 
 export namespace LanguageServerConstants {
   export const Latest = 'latest';
-  export const LatestVersion = '3.5.0';
+  export const LatestVersion = '0.0.1';
   export const UnknownVersion = 'unknown';
-  export const DownloadBaseUri = 'https://github.com/dafny-lang/dafny/releases/download';
+  export const DownloadBaseUri = 'https://github.com/jakenater99/dafny-proof/releases/download';
 
   export function GetResourceFolder(version: string): string[] {
     return [ 'out', 'resources', version ];
@@ -61,3 +61,4 @@ export namespace LanguageServerConstants {
     return `out/resources/${version}/dafny/Dafny.dll`;
   }
 }
+

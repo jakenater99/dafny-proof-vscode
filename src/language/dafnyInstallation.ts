@@ -107,18 +107,18 @@ export class DafnyInstaller {
 
   public async install(): Promise<boolean> {
     this.statusOutput.show();
-    this.writeStatus('starting Dafny installation');
+    this.writeStatus('starting Dafny Proof installation');
     try {
       await this.cleanInstallDir();
       const archive = await this.downloadArchive(getDafnyDownloadAddress());
       await this.extractArchive(archive);
       await workspace.fs.delete(archive, { useTrash: false });
-      this.writeStatus('Dafny installation completed');
+      this.writeStatus('Dafny Proof installation completed');
       return true;
     } catch(error: unknown) {
-      this.writeStatus('Dafny installation failed:');
+      this.writeStatus('Dafny Proof installation failed:');
       this.writeStatus(`> ${error}`);
-      console.error('dafny installation failed', error);
+      console.error('dafny proof installation failed', error);
       return false;
     }
   }
@@ -139,7 +139,7 @@ export class DafnyInstaller {
 
   private async cleanInstallDir(): Promise<void> {
     const installPath = this.getInstallationPath();
-    this.writeStatus(`deleting previous Dafny installation at ${installPath.fsPath}`);
+    this.writeStatus(`deleting previous Dafny Proof installation at ${installPath.fsPath}`);
     try {
       await workspace.fs.delete(
         installPath,
@@ -160,7 +160,7 @@ export class DafnyInstaller {
     return await new Promise<Uri>((resolve, reject) => {
       const archivePath = this.getZipPath();
       const archiveHandle = fs.createWriteStream(archivePath.fsPath);
-      this.writeStatus(`downloading Dafny from ${downloadUri}`);
+      this.writeStatus(`downloading Dafny Proof from ${downloadUri}`);
       const progressReporter = new ProgressReporter(this.statusOutput);
       archiveHandle
         .on('finish', () => resolve(archivePath))
@@ -174,7 +174,7 @@ export class DafnyInstaller {
 
   private async extractArchive(archivePath: Uri): Promise<void> {
     const dirPath = this.getInstallationPath();
-    this.writeStatus(`extracting Dafny to ${dirPath.fsPath}`);
+    this.writeStatus(`extracting Dafny Proof to ${dirPath.fsPath}`);
     const progressReporter = new ProgressReporter(this.statusOutput);
     await extract(
       archivePath.fsPath,
