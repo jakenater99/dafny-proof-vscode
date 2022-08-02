@@ -4,7 +4,7 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>dfy</string>
+		<string>dfyp</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>(\{\s*(//.*)?$|^\s*// \{\{\{)</string>
@@ -385,7 +385,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(class|trait|function|include|ghost|nameonly|var|const|method|constructor|abstract|module|import|export|lemma|as|is|opened|static|twostate|refines|witness|extends|returns|break|then|else|if|label|return|while|for|to|downto|print|new|in|fresh|allocated|match|case|assert|by|assume|expect|reveal|modify|predicate|least|greatest|forall|exists|false|true|null|old|unchanged|calc|iterator|yields|yield)\b</string>
+					<string>\b(class|trait|function|include|ghost|nameonly|var|const|method|constructor|abstract|module|import|export|lemma|as|is|opened|static|twostate|refines|witness|extends|returns|break|then|else|if|label|return|while|for|to|downto|print|new|in|fresh|allocated|match|case|by|assume|expect|reveal|modify|predicate|least|greatest|forall|exists|false|true|null|old|unchanged|calc|iterator|yields|yield)\b</string>
 					<key>name</key>
 					<string>keyword.control.dafny</string>
 				</dict>
@@ -557,7 +557,7 @@
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>text.dfy.dafny</string>
+	<string>text.dfyp.dafny</string>
 	<key>uuid</key>
 	<string>f4eb6552-5503-47cf-9d18-6388d0981235</string>
 </dict>
